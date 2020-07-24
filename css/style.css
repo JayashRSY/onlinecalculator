@@ -1,21 +1,29 @@
 
+div {
+    background: rgb(2,0,36);
+background: -moz-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(47,238,255,1) 0%, rgba(26,176,215,1) 73%);
+background: -webkit-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(47,238,255,1) 0%, rgba(26,176,215,1) 73%);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(47,238,255,1) 0%, rgba(26,176,215,1) 73%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#1ab0d7",GradientType=1);
+}
+
+
+
+
 #calc-contain{
   position: relative;
   width: 400px;
-  border: 2px solid black;
+  border: 20px solid black;
   border-radius: 12px;
   margin: 0px auto;
   padding: 20px 20px 100px 20px;
 }
 #agh{
   position: relative;
-  float: right;
-  margin-top: 15px;
+  float: center ;
+  margin-top: 20px;
 }
-#agh p{
-  font-size: 20px;
-  font-weight: 900;
-}
+
 input[type=button] {
   background: lightGray;
   width: 20%;
@@ -27,7 +35,7 @@ input[type=button] {
 }
 input[type=button]:active {
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  box-shadow: 5px #666;
   transform: translateY(4px);
 }
 input[type=button]:hover {
