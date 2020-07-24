@@ -1,49 +1,105 @@
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-    <link rel="stylesheet" href="css/style.css">
         <title>Calculator by Jayash</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+        <script src="script.js"></script>
     </head>
     <body>
-        <div id='calc-contain'>
-  
-          <form name="calculator">
-            
-            <input type="text" name="answer" />
-            <br>
-            
-            <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
-            <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
-            <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
-            <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
-            <br/>
-            
-            <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
-            <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
-            <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
-            <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
-            </br>
-          
-            <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
-            <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
-            <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
-            <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
-            </br>
-        
-            <input type="button" value=" AC " onclick="calculator.answer.value = ''" />
-            <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-            <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
-            <input type="button" value=" / " onclick="calculator.answer.value += '/'" />
-            </br>
-  
-    
-          </form>
-         <br><br>
-          <p align= "center">Calculator by Jayash
-         </p>
-         
+        <div class="main">
+            <form name="form">
+                <input class="textview" name="textview" placeholder="0" style="overflow: scroll;" disabled>
+            </form>
+            <table>
+                <tr>
+                    <td>
+                        <div class="button" id="clean" onclick="clean()"><div class="inner">C</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="back()"><div class="inner"><img alt="←" id="img" src="https://www.dropbox.com/s/2jmv326a6rdvijq/Clear.png?raw=1"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="opt('/')"><div class="inner">÷</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="opt('*')"><div class="inner">×</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button none" onclick="insert(7)"><div class="inner">7</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(8)"><div class="inner">8</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(9)"><div class="inner">9</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert('-')"><div class="inner">-</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button none" onclick="insert(4)"><div class="inner">4</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(5)"><div class="inner">5</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(6)"><div class="inner">6</div>
+                        </div>
+                    </td>
+                    <td rowspan="2" id="plus">
+                        <div id="first" class="button none" onclick="opt('+')"><div class="inner">+</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button none" onclick="insert(1)"><div class="inner">1</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(2)"><div class="inner">2</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(3)"><div class="inner">3</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="zero" class="button none" onclick="zero()"><div class="inner">0</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert('.')"><div class="inner">.</div>
+                        </div>
+                    </td>
+                    <td colspan="2" id="equal">
+                        <div id="second" class="button none" onclick="equal()"><div class="inner">=</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
+        <div id="copy">&copy;Jayash</div>
     </body>
 </html>
