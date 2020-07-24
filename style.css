@@ -149,12 +149,4 @@ table {
     background: transparent;
     color: auto;
 }
-#heading {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    font-size: 200px;
-    color: #fff;
-    text-shadow: .5px .5px 5px #5c5859;
-}
+
