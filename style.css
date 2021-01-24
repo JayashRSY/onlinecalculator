@@ -5,7 +5,8 @@ body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("bg.jpg"); 
+    background: linear-gradient(360deg, #38aecc 10%, #347fb9 360%);
+   /* background-image: url("bg.jpg");    */ 
     background-position: center ;
     background-size: cover;
 }
