@@ -1,6 +1,6 @@
 
 
-alert("Calculator By Jayash !😊");
+
 function insert(num) {
 
     var a = document.form.textview;
